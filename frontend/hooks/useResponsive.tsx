@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
 
+type resolutionType = {
+    width: number,
+    height: number
+}
+
 const getResolution = () => {
     const { width: width, height: height } = window.screen
 
@@ -7,13 +12,11 @@ const getResolution = () => {
 
 } //end_getResolution
 
-const useResponsive = (resolution: number) => {
-    const [ currRes, setCurrRes ] = useState<any>(getResolution())
+const useResponsive = () => {
+    const [ currRes, setCurrRes ] = useState<resolutionType>(getResolution())
 
     useEffect(() => {
-        const handleResize = () => {
-            setCurrRes(getResolution())
-        }
+        const handleResize = () => setCurrRes(getResolution())
 
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)

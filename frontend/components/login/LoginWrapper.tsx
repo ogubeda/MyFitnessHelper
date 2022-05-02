@@ -6,7 +6,7 @@ import Dumbell from '../layout/svg/Dumbell'
 import useResponsive from '../../hooks/useResponsive'
 
 const LoginWrapper: FC = () => {
-    const currRes = useResponsive(window.screen.width)
+    const currRes = useResponsive()
 
     const handleSubmit = (): void => {
         console.log('click')
@@ -32,7 +32,12 @@ const LoginWrapper: FC = () => {
                     currRes.width > 1024 ?
 
                         <div className={style.infoContainer}>
-                            TEST
+                            <div className = {style.infoSentences}>
+                                <div>Logra tus objetivos</div>
+                                <div>Anota tus progresos</div>
+                                <div>Ajusta tu plan nutricional y entrenamiento</div>
+                                <div>Descubre tu potencial</div>
+                            </div>
                         </div>
                         : null
                 }

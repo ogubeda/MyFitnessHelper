@@ -37,6 +37,24 @@
     background-color: var(--main-color);
     height: 100%;
     flex-basis: 60%;
+    color: var(--body-color);
+}
+
+.infoSentences {
+    font-size: 42px;
+    font-weight: bold;
+    margin-left: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    height: 100%;
+    justify-content: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @media only screen and (max-width: 1024px) {
