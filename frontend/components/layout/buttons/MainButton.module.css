@@ -1,0 +1,27 @@
+.main-button {
+    padding: 10px 25px;
+    font-family: 'Akshar', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--element-color);
+    transition: all 0.2s ease-in;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.red {
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
+}
+
+.red:hover {
+    background-color: var(--main-color);
+    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.2em rgba(251, 81, 81, 0.6);
+    color: var(--element-color)
+}

@@ -1,0 +1,12 @@
+.inputText {
+    height: 45px;
+    font-size: 17px;
+    padding-left: 15px;
+    border-radius: 5px;
+    background-color: var(--element-color);
+    color: var(--rev-color);
+    font-family: Roboto;
+    min-width: 250px;
+    width: 50%;
+    max-width: 550px;
+}
