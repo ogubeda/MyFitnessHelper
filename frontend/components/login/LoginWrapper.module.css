@@ -3,6 +3,8 @@
     flex-direction: row;
     gap: 10px;
     align-content: center;
+    font-size: 22px;
+    margin-right: 15px;
 }
 
 .login-form {
@@ -34,10 +36,10 @@
 }
 
 .infoContainer {
-    background-color: var(--main-color);
+    background-color: #1f1f1f;
     height: 100%;
     flex-basis: 60%;
-    color: var(--body-color);
+    color: var(--rev-color);
 }
 
 .infoSentences {
@@ -55,6 +57,20 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.infoSentences div {
+    border-bottom: 5px solid var(--main-color);
+    width: fit-content;
+    z-index: 1;
+}
+
+.iconBackground {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    fill: var(--body-color);
+    margin-left: 5%;
 }
 
 @media only screen and (max-width: 1024px) {
