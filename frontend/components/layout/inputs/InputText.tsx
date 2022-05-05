@@ -5,14 +5,15 @@ interface Props {
     type: string,
     placeholder?: string,
     onChange?: any,
-    value?: string
+    value?: string,
 }
 
 const InputText: FC<Props> = ({ type, placeholder, onChange, value }) => {
 
+
     return (
         <>
-            <input className = {style.inputText} type = {type === 'password' ? 'password' : 'text'} placeholder = {placeholder} onChange = {onChange} value = {value}/>
+            <input className = {style.inputText} type = {type} placeholder = {placeholder} onChange = {onChange} value = {value}/>
         </>
     )
 }// end_InputText
