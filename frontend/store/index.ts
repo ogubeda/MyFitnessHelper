@@ -16,4 +16,6 @@ const appStore = createStore<RootState, any, any, any> (
   composeWithDevTools(applyMiddleware(thunkMiddleware)),
 );
 
+export type AppDispatch = typeof appStore.dispatch
+
 export default appStore;

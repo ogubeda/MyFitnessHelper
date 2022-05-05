@@ -46,6 +46,8 @@
     width: 30px;
     height: 30px;
     opacity: 0;
+    transition: opacity 0.2s ease-in;
+    fill: var(--warning-color)
 }
 
 .show {
@@ -80,10 +82,6 @@
     user-select: none;
     /* min-width: fit-content; */
     width: 70%;
-}
-
-.infoSentences div {
-    /* border-bottom: 5px solid var(--main-color); */
 }
 
 .infoDesc {

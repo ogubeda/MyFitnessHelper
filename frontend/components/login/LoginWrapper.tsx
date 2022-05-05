@@ -7,15 +7,22 @@ import useResponsive from '../../hooks/useResponsive'
 import useTestEmail from '../../hooks/useTestEmail'
 import useTestPassword from '../../hooks/useTestPassword'
 import { TiWarningOutline } from 'react-icons/ti'
+import { logIn } from '../../store/auth/actions/auth.actions'
+import useAppDispatch from '../../hooks/useAppDispatch'
+import useAppSelector from '../../hooks/useAppSelector'
 
 const LoginWrapper: FC = () => {
     const [ email, setEmail ] = useState<string>("")
     const [ password, setPassword ] = useState<string>("")
     const [ showEmailErr, setShowEmailErr ] = useState<boolean>(false)
     const [ showPasswordErr, setShowPasswordErr ] = useState<boolean>(false)
+    const dispath = useAppDispatch()
     const emailTest = useTestEmail(email)
     const passwordTest = useTestPassword(password) 
     const currRes = useResponsive()
+    const state = useAppSelector(state => state)
+
+    console.log(state)
 
     const changeEmail = (event) => {
         setEmail(event.target.value)
@@ -26,11 +33,12 @@ const LoginWrapper: FC = () => {
     } //end_changePassword
 
     const handleSubmit = (): void => {
+        setShowEmailErr(!emailTest)
+        setShowPasswordErr(!passwordTest)
+        
         if (emailTest && passwordTest) {
             console.log("perfect")
-        }else {
-            setShowEmailErr(!emailTest)
-            setShowPasswordErr(!passwordTest)
+            dispath(() => logIn(email, "user"))
         }
     } //end_handleSubmit
 
